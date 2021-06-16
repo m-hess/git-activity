@@ -11,7 +11,7 @@
     "babel-start": "babel-node src/server.js",
     "build": "npm run clean; NODE_ENV=production webpack",
     "clean": "rimraf dist",
-    "deploy": "npm run build; surge -p dist -d ci2hackathon.surge.sh; npm run clean"
+    "deploy": "npm run build; surge -p dist -d welcome-to-ci2.surge.sh; npm run clean"
   },
   "license": "ISC",
   "engines": {
