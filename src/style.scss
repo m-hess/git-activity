@@ -1,3 +1,117 @@
+body, html {
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #canvas {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+svg {
+  background-color: black;
+}
+
+body, html, #main {
+  color: black;
+}
+text {
+  background-color: purple
+}
+
+circle {
+    background-image: url('https://placekitten.com/300/200');
+}
+
+.a-chen {
+    color: 'red'
+
+}
+.a-myrzabekova {
+    color: 'red'
+
+}
+.a-walther {
+    color: 'red'
+
+}
+
+.b-choy {
+    color: 'red'
+
+}
+
+.d-zhong {
+    color: 'red'
+
+}
+
+.e-lopes {
+    color: 'red'
+
+}
+.e-xie {
+    color: 'red'
+
+}
+.e-tshimanga {
+    color: 'red'
+
+}
+.e-bhargava {
+    color: 'red'
+
+}
+.e-seo {
+    color: 'red'
+
+}
+.e-chang {
+    color: 'red'
+
+}
+.j-li {
+    color: 'red'
+
+}
+.j-wang {
+    color: 'red'
+
+}
+.k-kapoor {
+    color: 'red'
+
+}
+.s-li {
+    color: 'red'
+
+}
+.n-tsai {
+    color: 'red'
+}
+.v-wong {
+
+}
+.v-chen {
+    color: 'red'
+}
+.w-cruz-lopez {
+    color: 'red'
+
+}
+
 // body, html, #main {
 //     display: flex;
 //     flex-direction: column;

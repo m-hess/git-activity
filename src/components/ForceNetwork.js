@@ -1,7 +1,3 @@
-import React, { Component } from 'react';
-import * as d3 from 'd3';
-import './viz.scss';
-
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-string-refs */
 /* eslint-disable no-unused-expressions */
@@ -10,6 +6,30 @@ import './viz.scss';
 /* eslint-disable prefer-template */
 /* eslint-disable no-multi-spaces */
 /* eslint-disable no-nested-ternary */
+/* eslint-disable no-unused-vars */
+import React, { Component } from 'react';
+import * as d3 from 'd3';
+import mhess from '../imgs/m-hess.png';
+import achen from '../imgs/a-chen.png';
+import amyrzabekova from '../imgs/a-myrzabekova.png.jpg';
+import awalther from '../imgs/parker-walther.jpg';
+import bchoy from '../imgs/b-choy.png';
+import dzhong from '../imgs/d-zhong.png';
+import elopes from '../imgs/e-lopes.png';
+import exie from '../imgs/e-xie.png';
+import etshimanga from '../imgs/EA-Tshimanga.jpg';
+import ebhargava from '../imgs/e-bhargava.png';
+import eseo from '../imgs/e-seo.jpg';
+import echang from '../imgs/e-chang.jpeg';
+// import jli from '../imgs/j-li.png'
+import jwang from '../imgs/j-wang.png';
+import kkapoor from '../imgs/K-Kapoor.jpg';
+import sli from '../imgs/s-li.png';
+// import ntsai from '../imgs/n-tsai.png';
+import vwong from '../imgs/Victoria-Wong.png';
+import vchen from '../imgs/v-chen.png';
+import wcruzlopez from '../imgs/w-cruzlopez.jpeg';
+// import '../style.scss';
 
 class ForceNetwork extends Component {
   componentDidMount() {
@@ -19,47 +39,47 @@ class ForceNetwork extends Component {
     // };
     const data = {
       nodes: [{
-        id: 1, name: 'Addison Chen', x: 469, y: 410,
+        id: 'm-hess', name: 'Created By: Madeline Hess', x: 469, y: 410,
       }, {
-        id: 2, name: 'Anara Myrzabekova', x: 469, y: 410,
+        id: 'a-cheng', name: 'Addison Cheng', x: 469, y: 410,
       }, {
-        id: 3, name: 'Bryan Choy', x: 469, y: 410,
+        id: 'a-myrzabekova', name: 'Anara Myrzabekova', x: 469, y: 410,
       }, {
-        id: 4, name: 'Denise Zhong', x: 469, y: 410,
+        id: 'b-choy', name: 'Bryan Choy', x: 469, y: 410,
       }, {
-        id: 5, name: 'Eshan Bhargava', x: 469, y: 410,
+        id: 'd-zhong', name: 'Denise Zhong', x: 469, y: 410,
       }, {
-        id: 6, name: 'Evan Chang', x: 469, y: 410,
+        id: 'e-bhargava', name: 'Eshan Bhargava', x: 469, y: 410,
       }, {
-        id: 7, name: 'Eduarda Lopes', x: 469, y: 410,
+        id: 'e-chang', name: 'Evan Chang', x: 469, y: 410,
       }, {
-        id: 8, name: 'Eurie Seo', x: 469, y: 410,
+        id: 'e-lopes', name: 'Eduarda Lopes', x: 469, y: 410,
       }, {
-        id: 9, name: 'Emily Xie', x: 469, y: 410,
+        id: 'e-seo', name: 'Eurie Seo', x: 469, y: 410,
       }, {
-        id: 10, name: 'Ajani Tshimanga', x: 469, y: 410,
+        id: 'e-xie', name: 'Emily Xie', x: 469, y: 410,
       }, {
-        id: 11, name: 'Jolie Wang', x: 539, y: 134,
+        id: 'a-tshimanga', name: 'Ajani Tshimanga', x: 539, y: 134,
       }, {
-        id: 12, name: 'Krish Kapoor', x: 555, y: 122,
+        id: 'j-wang', name: 'Jolie Wang', x: 555, y: 122,
       },
       {
-        id: 13, name: 'Parker Walther', x: 567, y: 112,
+        id: 'k-kapoor', name: 'Krish Kapoor', x: 567, y: 112,
       },
       {
-        id: 14, name: 'Steven Li', x: 579, y: 100,
+        id: 'p-walther', name: 'Parker Walther', x: 579, y: 100,
       }, {
-        id: 15, name: 'Victor Chen', x: 589, y: 95,
+        id: 's-li', name: 'Steven Li', x: 589, y: 95,
       },
       {
-        id: 16, name: 'Victoria Wong', x: 600, y: 83,
+        id: 'v-chen', name: 'Victor Chen', x: 600, y: 83,
       }, {
-        id: 17, name: 'Wilson CruzLopez', x: 616, y: 76,
+        id: 'v-wong', name: 'Victoria Wong', x: 616, y: 76,
       }, {
-        id: 18, name: 'Created By: Madeline Hess', x: 616, y: 76,
+        id: 'w-cruzlopez', name: 'Wilson Cruz-Lopez', x: 616, y: 76,
       },
       ],
-      links: [{ source: 0, target: 1 },
+      links: [
         { source: 1, target: 7 },
         { source: 1, target: 8 },
         { source: 1, target: 9 },
@@ -149,13 +169,14 @@ class ForceNetwork extends Component {
     // const height = 400 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    const canvasHeight = 700;
+    const canvasHeight = 750;
     const canvasWidth = 1000;
     const scale = 20;
     const svg = d3.select(this.refs.canvas)
       .append('svg')
       .attr('width', canvasWidth)
       .attr('height', canvasHeight)
+    //   .style('background-color', 'black')
       .style('border', '1px solid black');
 
     // svg.selectAll('rect')
@@ -180,6 +201,7 @@ class ForceNetwork extends Component {
       .selectAll('.link')
       .data(data.links)
       .join('line')
+      .style('stroke', 'lime')
       .classed('link', true);
 
     // const node = svg.selectAll('circle')
@@ -203,24 +225,293 @@ class ForceNetwork extends Component {
     // //   .classed((d) => { return d.; })
     //   .classed('fixed', (d) => { return d.fx !== undefined; });
 
+    const config = {
+      avatar_size: 120,
+    };
+    const defs = svg.append('svg:defs');
+
+    defs.append('svg:pattern')
+      .attr('id', 'm-hess')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', mhess)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'a-chen')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', achen)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'a-myrzabekova')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', amyrzabekova)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'a-walther')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', awalther)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'b-choy')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', bchoy)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'd-zhong')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', dzhong)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'e-lopes')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', elopes)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'e-xie')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', exie)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'e-tshimanga')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', etshimanga)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'e-bhargava')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', ebhargava)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'e-seo')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', eseo)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'e-chang')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', echang)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'j-wang')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', jwang)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'k-kapoor')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', kkapoor)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 's-li')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', sli)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'v-wong')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', vwong)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'v-chen')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', vchen)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    defs.append('svg:pattern')
+      .attr('id', 'w-cruzlopez')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 1)
+      .attr('height', 1)
+      .attr('patternUnits', 'objectBoundingBox')
+      .append('svg:image')
+      .attr('xlink:href', wcruzlopez)
+      .attr('width', config.avatar_size)
+      .attr('height', config.avatar_size);
+
+    // defs.append('svg:pattern')
+    //   .attr('id', 'm-hess')
+    // //   .attr('patternContentUnits', 'objectBoundingBox')
+    //   .attr('patternUnits', 'userSpaceOnUse')
+    //   .attr('width', '50')
+    //   .attr('height', '50')
+    //   .append('svg:image')
+    //   .attr('xlink:href', '../imgs/m-hess.png')
+    //   .attr('x', 0)
+    //   .attr('y', 0)
+    //   .attr('width', 6)
+    //   .attr('height', 6);
+
     const node = svg.selectAll('.node')
       .data(data.nodes)
       .enter().append('g');
+    //   .attr('fill', 'purple');
+    //   .attr('fillImage', 'url(../imgs/m-hess.png)');
+    //   .attr('style', 'fill:url(../imgs/m-hess.png)');
 
     const circle = node.append('circle')
       .attr('class', 'node')
       .attr('class', (datapoint) => { return datapoint.id; })
-      .attr('r', 50)
-      .attr('id', function (d) { return d.name; })
-      .style('fill', 'orange');
+      .attr('r', 60)
+      .style('fill', (datapoint) => { return 'url(#' + (datapoint.id) + ')'; })
+    //   .style('fill', 'url(#m-hess)')
+      .attr('id', function (d) { return d.name; });
+
+    // const bbox = node.append('rect', 'text')
+    //   .attr('width', '100px')
+    //   .attr('height', '25px')
+    //   .style('fill', 'black');
 
     const label = node.append('svg:text')
       .text(function (d) { return d.name; })
       .style('text-anchor', 'middle')
-      .attr('dy', 70)
-      .style('fill', '#555')
+      .attr('dy', 90)
+      .style('fill', 'white')
       .style('font-family', 'Arial')
-      .style('font-size', 12);
+      .style('font-size', 17);
+
+    // const img = svg.selectAll('circle').append('svg:image')
+    //   .attr('xlink:href', mhess)
+    //   .attr('cx', 700)
+    //   .attr('cy', 300)
+    //   .attr('height', 10)
+    //   .attr('width', 10);
+
+    //   .attr('fill', 'url(#m-hess')
+    //   .attr('fillImage', ' url(../imgs/m-hess.png)')
+
+    // const img = node.append('svg:image')
+    //   .attr('xlink:href', 'fill:url(../imgs/m-hess.png)')
+    //   .attr('x', 2)
+    //   .attr('width', 76)
+    //   .attr('height', 120);
+    //   .attr('style', 'fill:url(../imgs/m-hess.png)');
+
+    // const img = circle.append('svg:image')
+    //   .attr('xlink:href', 'https://placekitten.com/300/200');
+    //   .style('fill', 'orange');
+    // .attr("x", function(d){return d.bbox.x})
+    // .attr("y", function(d){return d.bbox.y})
+    // .attr("width", function(d){return d.bbox.width})
+    // .attr("height", function(d){return d.bbox.height})
+    // .style("fill", "#FFE6F0");;
 
     // Let's list the force we wanna apply on the network
     // const simulation = d3.forceSimulation(data.nodes)                 // Force algorithm is applied to data.nodes
@@ -237,7 +528,7 @@ class ForceNetwork extends Component {
       .force('charge', d3.forceManyBody())
       .force('center', d3.forceCenter(canvasWidth / 2, canvasHeight / 2))
       .force('link', d3.forceLink(data.links).distance(100))
-      .force('collide', d3.forceCollide(75))
+      .force('collide', d3.forceCollide(90))
       .on('tick', tick);
 
     // This function is run at each iteration of the force algorithm, updating the nodes position.
@@ -251,6 +542,7 @@ class ForceNetwork extends Component {
     //     .attr('cx', function (d) { return d.x + 6; })
     //     .attr('cy', function (d) { return d.y - 6; });
     // }
+    const radius = 50;
     function tick() {
       link
         .attr('x1', (d) => { return d.source.x; })
@@ -261,11 +553,17 @@ class ForceNetwork extends Component {
       //     .attr('cx', (d) => { return d.x; })
       //     .attr('cy', (d) => { return d.y; });
       circle
-        .attr('cx', function (d) { return d.x; })
-        .attr('cy', function (d) { return d.y; });
+        .attr('cx', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 60, d.x)); })
+        .attr('cy', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 60, d.y)); });
       label
-        .attr('x', function (d) { return d.x; })
-        .attr('y', function (d) { return d.y - 10; });
+        .attr('x', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 60, d.x)); })
+        .attr('y', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 60, d.y)) - 10; });
+    //   bbox
+    //     .attr('x', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 60, d.x - 50)); })
+    //     .attr('y', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 60, d.y + 75)) - 10; });
+    //   img
+    //     .attr('cx', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 50, d.x)); })
+    //     .attr('cy', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 20, d.y)); });
     }
 
     // Define dragging behavior
