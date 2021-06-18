@@ -18,7 +18,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="canvas">
-        {/* <BarChart /> */}
+        <h1>Welcome to the CI2 Summer Interns!</h1>
+        <h2>UCSF Center for Intelligent Imaging 2021</h2>
         <ForceNetwork />
         {/* <BarChart data={this.state.data} width={this.state.width} height={this.state.height} id={this.state.id} /> */}
       </div>

@@ -10,23 +10,23 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
 import mhess from '../imgs/m-hess.png';
-import achen from '../imgs/a-chen.png';
+import achen from '../imgs/a-chen.jpeg';
 import amyrzabekova from '../imgs/a-myrzabekova.png.jpg';
 import awalther from '../imgs/parker-walther.jpg';
-import bchoy from '../imgs/b-choy.png';
+import bchoy from '../imgs/b-choy.jpeg';
 import dzhong from '../imgs/d-zhong.png';
 import elopes from '../imgs/e-lopes.png';
-import exie from '../imgs/e-xie.png';
+import exie from '../imgs/e-xie.jpeg';
 import etshimanga from '../imgs/EA-Tshimanga.jpg';
 import ebhargava from '../imgs/e-bhargava.png';
 import eseo from '../imgs/e-seo.jpg';
 import echang from '../imgs/e-chang.jpeg';
 // import jli from '../imgs/j-li.png'
-import jwang from '../imgs/j-wang.png';
+import jwang from '../imgs/j-wang.jpeg';
 import kkapoor from '../imgs/K-Kapoor.jpg';
 import sli from '../imgs/s-li.png';
 // import ntsai from '../imgs/n-tsai.png';
-import vwong from '../imgs/Victoria-Wong.png';
+import vwong from '../imgs/Victoria-Wong.jpeg';
 import vchen from '../imgs/v-chen.png';
 import wcruzlopez from '../imgs/w-cruzlopez.jpeg';
 // import '../style.scss';
@@ -39,9 +39,9 @@ class ForceNetwork extends Component {
     // };
     const data = {
       nodes: [{
-        id: 'm-hess', name: 'Created By: Madeline Hess', x: 469, y: 410,
+        id: 'm-hess', name: 'Created By: Maddie Hess', x: 469, y: 410,
       }, {
-        id: 'a-cheng', name: 'Addison Cheng', x: 469, y: 410,
+        id: 'a-chen', name: 'Addison Chen', x: 469, y: 410,
       }, {
         id: 'a-myrzabekova', name: 'Anara Myrzabekova', x: 469, y: 410,
       }, {
@@ -59,7 +59,7 @@ class ForceNetwork extends Component {
       }, {
         id: 'e-xie', name: 'Emily Xie', x: 469, y: 410,
       }, {
-        id: 'a-tshimanga', name: 'Ajani Tshimanga', x: 539, y: 134,
+        id: 'e-tshimanga', name: 'Ajani Tshimanga', x: 539, y: 134,
       }, {
         id: 'j-wang', name: 'Jolie Wang', x: 555, y: 122,
       },
@@ -67,7 +67,7 @@ class ForceNetwork extends Component {
         id: 'k-kapoor', name: 'Krish Kapoor', x: 567, y: 112,
       },
       {
-        id: 'p-walther', name: 'Parker Walther', x: 579, y: 100,
+        id: 'a-walther', name: 'Parker Walther', x: 579, y: 100,
       }, {
         id: 's-li', name: 'Steven Li', x: 589, y: 95,
       },
@@ -93,7 +93,6 @@ class ForceNetwork extends Component {
         { source: 3, target: 9 },
         { source: 3, target: 10 },
         { source: 4, target: 7 },
-        { source: 4, target: 8 },
         { source: 4, target: 9 },
         { source: 4, target: 10 },
         { source: 5, target: 7 },
@@ -169,15 +168,15 @@ class ForceNetwork extends Component {
     // const height = 400 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    const canvasHeight = 750;
-    const canvasWidth = 1000;
+    const canvasHeight = 640;
+    const canvasWidth = 1200;
     const scale = 20;
     const svg = d3.select(this.refs.canvas)
       .append('svg')
       .attr('width', canvasWidth)
       .attr('height', canvasHeight)
     //   .style('background-color', 'black')
-      .style('border', '1px solid black');
+      .style('stroke-width', '3px');
 
     // svg.selectAll('rect')
     //   .data(data.nodes).enter()
@@ -197,12 +196,6 @@ class ForceNetwork extends Component {
     // // .attr('x2', (datapoint, iteration) => { iteration * 45; })
     // // .attr('y2', (datapoint) => { canvasHeight - datapoint.id * scale; })
     //   .style('stroke', '#aaa');
-    const link = svg
-      .selectAll('.link')
-      .data(data.links)
-      .join('line')
-      .style('stroke', 'lime')
-      .classed('link', true);
 
     // const node = svg.selectAll('circle')
     //   .data(data.nodes).enter()
@@ -246,8 +239,8 @@ class ForceNetwork extends Component {
       .attr('id', 'a-chen')
       .attr('x', 0)
       .attr('y', 0)
-      .attr('width', 1)
-      .attr('height', 1)
+      .attr('width', '150%')
+      .attr('height', '100%')
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
       .attr('xlink:href', achen)
@@ -459,12 +452,31 @@ class ForceNetwork extends Component {
     //   .attr('width', 6)
     //   .attr('height', 6);
 
+    // Define visual
+    const link = svg
+      .selectAll('.link')
+      .data(data.links)
+      .join('line')
+    //   .style('stroke', 'lime')
+    //   .style('stroke', '#4b7262')
+      .style('stroke', '#cc3300')
+      .classed('link', true);
+
     const node = svg.selectAll('.node')
       .data(data.nodes)
       .enter().append('g');
     //   .attr('fill', 'purple');
     //   .attr('fillImage', 'url(../imgs/m-hess.png)');
     //   .attr('style', 'fill:url(../imgs/m-hess.png)');
+
+    const label = node.append('svg:text')
+      .text(function (d) { return d.name; })
+      .style('text-anchor', 'middle')
+      .attr('dy', 90)
+      .style('fill', 'white')
+      .style('font-family', 'Open Sans')
+    //   .style('font-family', 'Lusitana')
+      .style('font-size', 19);
 
     const circle = node.append('circle')
       .attr('class', 'node')
@@ -478,14 +490,6 @@ class ForceNetwork extends Component {
     //   .attr('width', '100px')
     //   .attr('height', '25px')
     //   .style('fill', 'black');
-
-    const label = node.append('svg:text')
-      .text(function (d) { return d.name; })
-      .style('text-anchor', 'middle')
-      .attr('dy', 90)
-      .style('fill', 'white')
-      .style('font-family', 'Arial')
-      .style('font-size', 17);
 
     // const img = svg.selectAll('circle').append('svg:image')
     //   .attr('xlink:href', mhess)
@@ -552,13 +556,19 @@ class ForceNetwork extends Component {
       //   node
       //     .attr('cx', (d) => { return d.x; })
       //     .attr('cy', (d) => { return d.y; });
+      label
+        .attr('x', function (d) { return Math.max(radius - 100, Math.min(canvasWidth - radius - 60, d.x)); })
+        .attr('y', function (d) { return Math.max(radius + 10, Math.min(canvasHeight - radius - 80, d.y)) - 10; });
       circle
         .attr('cx', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 60, d.x)); })
-        .attr('cy', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 60, d.y)); });
-      label
-        .attr('x', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 60, d.x)); })
-        .attr('y', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 60, d.y)) - 10; });
-    //   bbox
+        .attr('cy', function (d) { return Math.max(radius + 10, Math.min(canvasHeight - radius - 80, d.y)); });
+    //   label
+    //     .attr('x', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 60, d.x)); })
+    //     .attr('y', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 80, d.y)) - 10; });
+    //   circle
+    //     .attr('cx', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 60, d.x)); })
+    //     .attr('cy', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 80, d.y)); });
+      //   bbox
     //     .attr('x', function (d) { return Math.max(radius, Math.min(canvasWidth - radius - 60, d.x - 50)); })
     //     .attr('y', function (d) { return Math.max(radius, Math.min(canvasHeight - radius - 60, d.y + 75)) - 10; });
     //   img

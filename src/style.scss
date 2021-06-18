@@ -2,114 +2,49 @@ body, html {
     padding: 0px;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: rgb(3, 22, 48);
 }
 
 #main {
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
-    #canvas {
+    .canvas {
         height: 100%;
         width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        
+        h1 {
+            font-family: "Lusitana"; 
+            font-size: 64px;
+            color: white;
+            margin: 10px 0px 10px 0px;
+            padding: 0;
+        }
+        h2 {
+            color: white;
+            font-size: 32px;
+            padding: 0px 0px 5px 0px;
+            margin: 0;
+        }
     }
 }
 svg {
-  background-color: black;
+  background-color: rgb(3, 22, 48);
 }
 
-body, html, #main {
-  color: black;
-}
 text {
-  background-color: purple
+  background-color: rgb(187, 79, 30)
 }
 
 circle {
     background-image: url('https://placekitten.com/300/200');
-}
-
-.a-chen {
-    color: 'red'
-
-}
-.a-myrzabekova {
-    color: 'red'
-
-}
-.a-walther {
-    color: 'red'
-
-}
-
-.b-choy {
-    color: 'red'
-
-}
-
-.d-zhong {
-    color: 'red'
-
-}
-
-.e-lopes {
-    color: 'red'
-
-}
-.e-xie {
-    color: 'red'
-
-}
-.e-tshimanga {
-    color: 'red'
-
-}
-.e-bhargava {
-    color: 'red'
-
-}
-.e-seo {
-    color: 'red'
-
-}
-.e-chang {
-    color: 'red'
-
-}
-.j-li {
-    color: 'red'
-
-}
-.j-wang {
-    color: 'red'
-
-}
-.k-kapoor {
-    color: 'red'
-
-}
-.s-li {
-    color: 'red'
-
-}
-.n-tsai {
-    color: 'red'
-}
-.v-wong {
-
-}
-.v-chen {
-    color: 'red'
-}
-.w-cruz-lopez {
-    color: 'red'
-
 }
 
 // body, html, #main {
