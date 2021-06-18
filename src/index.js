@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.scss';
-
+// import './style.scss';
+import './index.css';
 // import { Provider } from 'react-redux';
 // import { createStore, applyMiddleware, compose } from 'redux';
 // import reducers from './reducers';
+// import Network from './components/network';
 import App from './components/app';
 /* eslint-disable no-undef */
 
