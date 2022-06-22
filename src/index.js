@@ -1,15 +1,26 @@
-// change require to es6 import style
-import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './style.scss';
+// import { Provider } from 'react-redux';
+// import { createStore, applyMiddleware, compose } from 'redux';
+// import reducers from './reducers';
+// import Network from './components/network';
+import App from './components/app';
+/* eslint-disable no-undef */
 
-let num = 0;
+ReactDOM.render(<App />, document.getElementById('main'));
 
-// Increment and display time spent on page
-// Source: https://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval2
-function timer() {
-  num += 1;
-  // document.getElementById('#main').innerHTML = (`<p>Youve been on this page for ${num} seconds.</p>`);
-  $('#main').html(`<p>Youve been on this page for ${num} seconds.</p>`);
-}
-// Calculate and display time
-setInterval(timer, 1000);
+// // this creates the store with the reducers, and does some other stuff to initialize devtools
+// // boilerplate to copy, don't have to know
+// const store = createStore(reducers, {}, compose(
+//   applyMiddleware(),
+//   window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => { return (f); },
+// ));
+
+// // we now wrap App in a Provider
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <App />
+//   </Provider>,
+//   document.getElementById('main'),
+// );
