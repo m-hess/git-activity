@@ -11,26 +11,18 @@ const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { 
 
 module.exports = {
   mode: env,
-  output: {
-    publicPath: '/',
-    globalObject: 'this',
-  },
-  // entry: ['./src'], // this is where our app lives
-  entry: ['babel-polyfill', './src'],
+  entry: ['./src'], // this is where our app lives
   devtool: 'source-map', // this enables debugging with source in chrome devtools
   devServer: {
     hot: true,
-    port: 9090,
-    historyApiFallback: true,
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
+        use: [ // this is the part you want to add
           { loader: 'babel-loader' },
-          { loader: 'eslint-loader' },
         ],
       },
       {
@@ -65,31 +57,23 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpe?g|png|gif|svg|md)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              useRelativePath: true,
-              name: '[name].[ext]',
-            },
-          },
-        ],
+        test: /\.(jpe?g|png|gif|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name].[contenthash][ext][query]',
+        },
       },
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-    new ESLintPlugin({}),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
+      favicon: './src/favicon.png',
     }),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: './200.html',
+    new ESLintPlugin({}),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
     }),
   ],
 };
