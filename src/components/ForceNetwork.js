@@ -56,19 +56,19 @@ class ForceNetwork extends Component {
       }, {
         id: 'l-abdelrahman', name: 'Leila Abdelrahman', x: 555, y: 122,
       },
-      {
-        id: 'nameDASH', name: 'FULLNAME', x: 567, y: 112,
-      },
-      {
-        id: 'nameDASH', name: 'FULLNAME', x: 579, y: 100,
-      }, {
-        id: 'nameDASH', name: 'FULLNAME', x: 589, y: 95,
-      },
-      {
-        id: 'nameDASH', name: 'FULLNAME', x: 600, y: 83,
-      }, {
-        id: 'nameDASH', name: 'FULLNAME', x: 616, y: 76,
-      },
+      // {
+      //   id: 'nameDASH', name: 'FULLNAME', x: 567, y: 112,
+      // },
+      // {
+      //   id: 'nameDASH', name: 'FULLNAME', x: 579, y: 100,
+      // }, {
+      //   id: 'nameDASH', name: 'FULLNAME', x: 589, y: 95,
+      // },
+      // {
+      //   id: 'nameDASH', name: 'FULLNAME', x: 600, y: 83,
+      // }, {
+      //   id: 'nameDASH', name: 'FULLNAME', x: 616, y: 76,
+      // },
       ],
       links: [
         { source: 0, target: 8 },
