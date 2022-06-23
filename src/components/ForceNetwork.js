@@ -9,26 +9,26 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import * as d3 from 'd3';
-import mhess from '../imgs/empty.png';
-import achen from '../imgs/a-chen.jpeg';
-import amyrzabekova from '../imgs/a-myrzabekova.png.jpg';
-import awalther from '../imgs/parker-walther.jpg';
-import bchoy from '../imgs/b-choy.jpeg';
-import dzhong from '../imgs/d-zhong.png';
-import elopes from '../imgs/e-lopes.png';
-import exie from '../imgs/e-xie.jpeg';
-import etshimanga from '../imgs/EA-Tshimanga.jpg';
-import ebhargava from '../imgs/e-bhargava.png';
-import eseo from '../imgs/e-seo.jpg';
-import echang from '../imgs/e-chang.jpeg';
-// import jli from '../imgs/j-li.png'
-import jwang from '../imgs/j-wang.jpeg';
-import kkapoor from '../imgs/K-Kapoor.jpg';
-import sli from '../imgs/s-li.png';
-// import ntsai from '../imgs/n-tsai.png';
-import vwong from '../imgs/Victoria-Wong.jpeg';
-import vchen from '../imgs/v-chen.png';
-import wcruzlopez from '../imgs/w-cruzlopez.jpeg';
+import mhess from '../img/empty.png';
+import achen from '../img/a-chen.jpeg';
+import amyrzabekova from '../img/a-myrzabekova.png.jpg';
+import awalther from '../img/parker-walther.jpg';
+import bchoy from '../img/b-choy.jpeg';
+import dzhong from '../img/d-zhong.png';
+import elopes from '../img/e-lopes.png';
+import exie from '../img/e-xie.jpeg';
+import etshimanga from '../img/EA-Tshimanga.jpg';
+import ebhargava from '../img/e-bhargava.png';
+import eseo from '../img/e-seo.jpg';
+import echang from '../img/e-chang.jpeg';
+// import jli from '../img/j-li.png'
+import jwang from '../img/j-wang.jpeg';
+import kkapoor from '../img/K-Kapoor.jpg';
+import sli from '../img/s-li.png';
+// import ntsai from '../img/n-tsai.png';
+import vwong from '../img/Victoria-Wong.jpeg';
+import vchen from '../img/v-chen.png';
+import wcruzlopez from '../img/w-cruzlopez.jpeg';
 
 class ForceNetwork extends Component {
   componentDidMount() {
@@ -451,7 +451,9 @@ class ForceNetwork extends Component {
     }
   }
 
-  render() { return <div ref="canvas" />; }
+  render() { 
+    return <div ref="canvas" />; 
+  }
 }
 
 export default ForceNetwork;
