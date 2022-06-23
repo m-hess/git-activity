@@ -7,6 +7,7 @@
     "test": "eslint src",
     "build": "npm run clean; NODE_ENV=production webpack --color",
     "windowsbuild": "npm run clean & SET NODE_ENV=production& webpack --color",
+    "deploy": "npm run build; surge -p dist -d welcome-to-ci2.surge.sh; npm run clean",
     "start": "NODE_ENV=development webpack serve",
     "clean": "rimraf dist"
   },
