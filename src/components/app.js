@@ -11,7 +11,7 @@ class App extends React.Component {
         </div>
         <div className="header">
           <h1>Welcome to the CI2 Summer Interns!</h1>
-          <h2>UCSF Center for Intelligent Imaging 2021</h2>
+          <h2>UCSF Center for Intelligent Imaging 2022</h2>
         </div>
         <div className="canvas">
 
@@ -21,7 +21,7 @@ class App extends React.Component {
         <div className="description">
           <h2>What is this?</h2>
           <p>
-            This activity was completed as part of an activity in the 2021 UCSF CI2 intern onboarding week.
+            This activity was completed as part of an activity in the 2022 UCSF CI2 intern onboarding week.
             Each intern was asked to learn and experiment with some of the Git CLI tools by uploading a photo of themselves to a shared repository.
             This visualization is a play on what they spent the rest of the week learning about: deep learning for medical imaging with convolutional neural networks.
           </p>

@@ -7,6 +7,8 @@
 /* eslint-disable no-multi-spaces */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-unused-vars */
+/* eslint-disable func-names */
+
 import React, { Component } from 'react';
 import * as d3 from 'd3';
 import mhess from '../img/empty.png';
@@ -451,8 +453,8 @@ class ForceNetwork extends Component {
     }
   }
 
-  render() { 
-    return <div ref="canvas" />; 
+  render() {
+    return <div ref="canvas" />;
   }
 }
 
