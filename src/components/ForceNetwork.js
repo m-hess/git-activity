@@ -12,67 +12,62 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
 import mhess from '../img/empty.png';
-import achen from '../img/a-chen.jpeg';
-import amyrzabekova from '../img/a-myrzabekova.png.jpg';
-import awalther from '../img/parker-walther.jpg';
-import bchoy from '../img/b-choy.jpeg';
-import dzhong from '../img/d-zhong.png';
-import elopes from '../img/e-lopes.png';
-import exie from '../img/e-xie.jpeg';
-import etshimanga from '../img/EA-Tshimanga.jpg';
-import ebhargava from '../img/e-bhargava.png';
-import eseo from '../img/e-seo.jpg';
-import echang from '../img/e-chang.jpeg';
-// import jli from '../img/j-li.png'
-import jwang from '../img/j-wang.jpeg';
-import kkapoor from '../img/K-Kapoor.jpg';
-import sli from '../img/s-li.png';
-// import ntsai from '../img/n-tsai.png';
-import vwong from '../img/Victoria-Wong.jpeg';
-import vchen from '../img/v-chen.png';
-import wcruzlopez from '../img/w-cruzlopez.jpeg';
+
+import mbondarenko from '../img/m-bondarenko.png';
+import ewei from '../img/e-wei.png';
+import jdean from '../img/j-dean.png';
+import kahmed from '../img/k-ahmed.png';
+import ahernandez from '../img/a-hernandez.png';
+import amurali from '../img/a-murali.png';
+import bbraun from '../img/b-braun.png';
+import mfung from '../img/m-fung.png';
+import mlu from '../img/m-lu.png';
+import rravishankar from '../img/r-ravishankar.png';
+import nbanerjee from '../img/n-banerjee.png';
+import labdelrahman from '../img/l-abdelrahman.png';
+// import  from '../img/empty.png';
 
 class ForceNetwork extends Component {
   componentDidMount() {
     // };
     const data = {
       nodes: [{
-        id: 'w-cruzlopez', name: 'Wilson Cruz-Lopez', x: 616, y: 76,
+        id: 'm-bondarenko', name: 'Masha Bondarenko', x: 616, y: 76,
       }, {
-        id: 'a-chen', name: 'Addison Chen', x: 469, y: 410,
+        id: 'e-wei', name: 'Eric Wei', x: 469, y: 410,
       }, {
-        id: 'a-myrzabekova', name: 'Anara Myrzabekova', x: 469, y: 410,
+        id: 'j-dean', name: 'Josh Dean', x: 469, y: 410,
       }, {
-        id: 'b-choy', name: 'Bryan Choy', x: 469, y: 410,
+        id: 'k-ahmed', name: 'Khaled Ahmed', x: 469, y: 410,
       }, {
-        id: 'd-zhong', name: 'Denise Zhong', x: 469, y: 410,
+        id: 'a-hernandez', name: 'Adriana Hernandez', x: 469, y: 410,
       }, {
-        id: 'e-bhargava', name: 'Eshan Bhargava', x: 469, y: 410,
+        id: 'a-murali', name: 'Aditya Murali', x: 469, y: 410,
       }, {
-        id: 'e-chang', name: 'Evan Chang', x: 469, y: 410,
+        id: 'b-braun', name: 'Bergen Braun', x: 469, y: 410,
       }, {
-        id: 'e-lopes', name: 'Eduarda Lopes', x: 469, y: 410,
+        id: 'm-fung', name: 'Melanie Fung', x: 469, y: 410,
       }, {
-        id: 'e-seo', name: 'Eurie Seo', x: 469, y: 410,
+        id: 'm-lu', name: 'Michael Lu', x: 469, y: 410,
       }, {
-        id: 'e-xie', name: 'Emily Xie', x: 469, y: 410,
+        id: 'r-ravishankar', name: 'Rahul Ravishankar', x: 469, y: 410,
       }, {
-        id: 'e-tshimanga', name: 'Ajani Tshimanga', x: 539, y: 134,
+        id: 'n-banerjee', name: 'Neel Benerjee', x: 539, y: 134,
       }, {
-        id: 'j-wang', name: 'Jolie Wang', x: 555, y: 122,
+        id: 'l-abdelrahman', name: 'Leila Abdelrahman', x: 555, y: 122,
       },
       {
-        id: 'k-kapoor', name: 'Krish Kapoor', x: 567, y: 112,
+        id: 'nameDASH', name: 'FULLNAME', x: 567, y: 112,
       },
       {
-        id: 'a-walther', name: 'Parker Walther', x: 579, y: 100,
+        id: 'nameDASH', name: 'FULLNAME', x: 579, y: 100,
       }, {
-        id: 's-li', name: 'Steven Li', x: 589, y: 95,
+        id: 'nameDASH', name: 'FULLNAME', x: 589, y: 95,
       },
       {
-        id: 'v-chen', name: 'Victor Chen', x: 600, y: 83,
+        id: 'nameDASH', name: 'FULLNAME', x: 600, y: 83,
       }, {
-        id: 'v-wong', name: 'Victoria Wong', x: 616, y: 76,
+        id: 'nameDASH', name: 'FULLNAME', x: 616, y: 76,
       },
       ],
       links: [
@@ -151,208 +146,160 @@ class ForceNetwork extends Component {
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'a-chen')
+      .attr('id', 'm-bondarenko')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', '150%')
       .attr('height', '100%')
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', achen)
+      .attr('xlink:href', mbondarenko)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'a-myrzabekova')
+      .attr('id', 'e-wei')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', amyrzabekova)
+      .attr('xlink:href', ewei)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'a-walther')
+      .attr('id', 'j-dean')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', awalther)
+      .attr('xlink:href', jdean)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'b-choy')
+      .attr('id', 'k-ahmed')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', bchoy)
+      .attr('xlink:href', kahmed)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'd-zhong')
+      .attr('id', 'a-hernandez')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', dzhong)
+      .attr('xlink:href', ahernandez)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'e-lopes')
+      .attr('id', 'a-murali')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', elopes)
+      .attr('xlink:href', amurali)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'e-xie')
+      .attr('id', 'b-braun')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', exie)
+      .attr('xlink:href', bbraun)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'e-tshimanga')
+      .attr('id', 'm-fung')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', etshimanga)
+      .attr('xlink:href', mfung)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'e-bhargava')
+      .attr('id', 'm-lu')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', ebhargava)
+      .attr('xlink:href', mlu)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'e-seo')
+      .attr('id', 'r-ravishankar')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', eseo)
+      .attr('xlink:href', rravishankar)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'e-chang')
+      .attr('id', 'n-banerjee')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', echang)
+      .attr('xlink:href', nbanerjee)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
     defs.append('svg:pattern')
-      .attr('id', 'j-wang')
+      .attr('id', 'l-abdelrahman')
       .attr('x', 0)
       .attr('y', 0)
       .attr('width', 1)
       .attr('height', 1)
       .attr('patternUnits', 'objectBoundingBox')
       .append('svg:image')
-      .attr('xlink:href', jwang)
+      .attr('xlink:href', labdelrahman)
       .attr('width', config.avatar_size)
       .attr('height', config.avatar_size);
 
-    defs.append('svg:pattern')
-      .attr('id', 'k-kapoor')
-      .attr('x', 0)
-      .attr('y', 0)
-      .attr('width', 1)
-      .attr('height', 1)
-      .attr('patternUnits', 'objectBoundingBox')
-      .append('svg:image')
-      .attr('xlink:href', kkapoor)
-      .attr('width', config.avatar_size)
-      .attr('height', config.avatar_size);
-
-    defs.append('svg:pattern')
-      .attr('id', 's-li')
-      .attr('x', 0)
-      .attr('y', 0)
-      .attr('width', 1)
-      .attr('height', 1)
-      .attr('patternUnits', 'objectBoundingBox')
-      .append('svg:image')
-      .attr('xlink:href', sli)
-      .attr('width', config.avatar_size)
-      .attr('height', config.avatar_size);
-
-    defs.append('svg:pattern')
-      .attr('id', 'v-wong')
-      .attr('x', 0)
-      .attr('y', 0)
-      .attr('width', 1)
-      .attr('height', 1)
-      .attr('patternUnits', 'objectBoundingBox')
-      .append('svg:image')
-      .attr('xlink:href', vwong)
-      .attr('width', config.avatar_size)
-      .attr('height', config.avatar_size);
-
-    defs.append('svg:pattern')
-      .attr('id', 'v-chen')
-      .attr('x', 0)
-      .attr('y', 0)
-      .attr('width', 1)
-      .attr('height', 1)
-      .attr('patternUnits', 'objectBoundingBox')
-      .append('svg:image')
-      .attr('xlink:href', vchen)
-      .attr('width', config.avatar_size)
-      .attr('height', config.avatar_size);
-
-    defs.append('svg:pattern')
-      .attr('id', 'w-cruzlopez')
-      .attr('x', 0)
-      .attr('y', 0)
-      .attr('width', 1)
-      .attr('height', 1)
-      .attr('patternUnits', 'objectBoundingBox')
-      .append('svg:image')
-      .attr('xlink:href', wcruzlopez)
-      .attr('width', config.avatar_size)
-      .attr('height', config.avatar_size);
+    // defs.append('svg:pattern')
+    //   .attr('id', 'FILLINDASH')
+    //   .attr('x', 0)
+    //   .attr('y', 0)
+    //   .attr('width', 1)
+    //   .attr('height', 1)
+    //   .attr('patternUnits', 'objectBoundingBox')
+    //   .append('svg:image')
+    //   .attr('xlink:href', FILLINNODASH)
+    //   .attr('width', config.avatar_size)
+    //   .attr('height', config.avatar_size);
 
     // Define visual
     const link = svg
